@@ -1,0 +1,30 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"headline": {
+				"__TYPE__": "FieldContent",
+				"value": "how",
+				"type": "Text"
+			},
+			"cta_label": {
+				"__TYPE__": "FieldContent",
+				"value": "third",
+				"type": "Text"
+			},
+			"copy": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Do consequat esse reprehenderit magna adipisicing."
+						}
+					}
+				]
+			}
+		},
+		"items": []
+	}
+]

@@ -1,0 +1,5 @@
+{
+  "repositoryName": "eddyson-partner-page",
+  "adapter": "@slicemachine/adapter-next",
+  "libraries": ["./src/slices"]
+}
