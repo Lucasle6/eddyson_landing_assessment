@@ -55,7 +55,7 @@ const Footer: FC<FooterProps> = ({ slice }) => {
           className="h-[54px] w-auto"
         />
 
-        <div className="mt-16 grid grid-cols-1 gap-x-12 gap-y-14 sm:grid-cols-2 xl:grid-cols-3">
+        <div className="mt-16 grid grid-cols-1 gap-x-12 gap-y-14 sm:grid-cols-2 lg:grid-cols-3">
           {/* Dirección */}
           {isFilled.richText(address) && (
             <address className="font-sans text-[18px] not-italic leading-[140%] tracking-[0.02em] xl:text-[24px] [&_p]:my-0">
@@ -153,7 +153,7 @@ const Footer: FC<FooterProps> = ({ slice }) => {
         </div>
 
         {/* Certificados */}
-        <div className="mt-16 flex flex-wrap items-center gap-9 xl:mt-24">
+        <div className="mt-16 flex flex-wrap items-center gap-9 xl:mt-[-80]">
           {CERTS.map((cert) => (
             // eslint-disable-next-line @next/next/no-img-element
             <img

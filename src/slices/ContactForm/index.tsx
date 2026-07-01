@@ -61,7 +61,7 @@ const ContactForm: FC<ContactFormProps> = ({ slice }) => {
         src="/Images/footer/Bottom-bg.png"
         alt=""
         aria-hidden
-        className="pointer-events-none absolute inset-0 z-0 h-full w-full select-none object-cover object-bottom"
+        className="pointer-events-none absolute xl:top-[55px] inset-0 z-0 h-full w-full select-none object-cover object-bottom"
       />
 
       <div className="relative z-10 mx-auto flex w-full max-w-[1495px] flex-col gap-12 px-6 py-16 xl:flex-row xl:items-center xl:justify-center xl:gap-[110px] xl:py-[100px]">

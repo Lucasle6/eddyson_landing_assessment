@@ -64,7 +64,7 @@ const EdiExpertise: FC<EdiExpertiseProps> = ({ slice }) => {
         )}
 
         {/* Grid de cards */}
-        <div className="mx-auto grid max-w-[1316px] grid-cols-1 gap-10 sm:grid-cols-2 xl:grid-cols-3">
+        <div className="mx-auto grid max-w-[1316px] grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-3">
           {cards.map((card, i) => (
             <article
               key={i}

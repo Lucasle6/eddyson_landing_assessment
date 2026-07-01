@@ -60,7 +60,7 @@ const PartnerProgram: FC<PartnerProgramProps> = ({ slice }) => {
           </div>
 
           {/* Cards */}
-          <div className="relative z-[1] flex w-full flex-col gap-5 xl:flex-row xl:px-[102px]">
+          <div className="relative z-[1] flex w-full flex-col gap-5 md:flex-row md:gap-4 xl:gap-5 xl:px-[102px]">
             {cards.map((card, i) => (
               <article
                 key={i}
