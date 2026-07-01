@@ -23,9 +23,18 @@ const PartnerProgram: FC<PartnerProgramProps> = ({ slice }) => {
     >
       <div className="mx-auto w-full max-w-[1495px] px-6 py-16 xl:py-[100px]">
         <div className="relative mx-auto flex w-full max-w-[1243px] flex-col items-start gap-12 overflow-hidden rounded-[24px] bg-[linear-gradient(222.63deg,#212121_15.95%,#000000_83.67%)] px-6 py-14 xl:gap-[70px] xl:px-0 xl:py-[70px]">
-          {/* TODO: curvas decorativas de fondo (Frame 1073715037) — líneas onduladas
-              teal #50E3C2 / rojo #FF4C4C / púrpura #BD10E0, detrás de las cards (z-0).
-              Pendiente: exportar el PNG desde Figma. */}
+          {/* Curvas decorativas de fondo (Frame 1073715037), detrás de las cards.
+              Los PNG son 1243px de ancho = ancho del contenedor. */}
+          <div
+            aria-hidden
+            className="pointer-events-none absolute inset-0 z-0 hidden xl:block"
+          >
+            {/* eslint-disable @next/next/no-img-element */}
+            <img src="/Images/partner-program/curve-cyan.png" alt="" className="absolute left-0 top-[312px] w-full select-none" />
+            <img src="/Images/partner-program/curve-red.png" alt="" className="absolute left-0 top-[364px] w-full select-none" />
+            <img src="/Images/partner-program/curve-purple.png" alt="" className="absolute left-0 top-[554px] w-full select-none" />
+            {/* eslint-enable @next/next/no-img-element */}
+          </div>
 
           {/* Header */}
           <div className="relative z-[1] flex w-full flex-col items-center gap-2 xl:px-[252px]">
