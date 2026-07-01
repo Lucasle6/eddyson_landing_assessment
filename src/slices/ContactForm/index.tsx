@@ -54,13 +54,14 @@ const ContactForm: FC<ContactFormProps> = ({ slice }) => {
       data-slice-variation={slice.variation}
       className="relative w-full overflow-hidden bg-canvas"
     >
-      {/* Fondo decorativo de cuadrícula (denso abajo, se desvanece arriba). */}
+      {/* Fondo decorativo de cuadrícula: cubre todo el slice (denso abajo,
+          se va aclarando hacia arriba). */}
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
         src="/Images/footer/Bottom-bg.png"
         alt=""
         aria-hidden
-        className="pointer-events-none absolute bottom-0 left-1/2 z-0 w-full max-w-[1680px] -translate-x-1/2 select-none"
+        className="pointer-events-none absolute inset-0 z-0 h-full w-full select-none object-cover object-bottom"
       />
 
       <div className="relative z-10 mx-auto flex w-full max-w-[1495px] flex-col gap-12 px-6 py-16 xl:flex-row xl:items-center xl:justify-center xl:gap-[110px] xl:py-[100px]">
