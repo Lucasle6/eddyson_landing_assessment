@@ -5,12 +5,12 @@ import { PrismicNextLink } from "@prismicio/next";
 
 export type FooterProps = SliceComponentProps<Content.FooterSlice>;
 
-// Certificados / sellos (estáticos, no editoriales).
+// Certificados / sellos (estáticos, no editoriales). Orden según el Figma.
 const CERTS = [
+  { src: "/Images/footer/certs/software-made.avif", alt: "Software Made in Germany", h: 96 },
+  { src: "/Images/footer/certs/software-hosted.avif", alt: "Software Hosted in Germany", h: 88 },
+  { src: "/Images/footer/certs/gs1.avif", alt: "GS1", h: 92 },
   { src: "/Images/footer/certs/crefozert.avif", alt: "Crefozert", h: 104 },
-  { src: "/Images/footer/certs/software-hosted.avif", alt: "Software hosted in Germany", h: 81 },
-  { src: "/Images/footer/certs/software-made.avif", alt: "Software Made in Germany", h: 90 },
-  { src: "/Images/footer/certs/gs1.avif", alt: "GS1", h: 74 },
 ];
 
 const iconForPlatform = (platform: string | null | undefined): string | null => {
@@ -28,7 +28,6 @@ const iconForPlatform = (platform: string | null | undefined): string | null => 
  */
 const Footer: FC<FooterProps> = ({ slice }) => {
   const {
-    logo,
     address,
     contact_general_label,
     contact_general_phone,
@@ -47,16 +46,14 @@ const Footer: FC<FooterProps> = ({ slice }) => {
       className="w-full bg-ink-strong text-white"
     >
       <div className="mx-auto w-full max-w-[1495px] px-6 py-20 xl:px-[122px] xl:py-[120px]">
-        {isFilled.image(logo) && (
-          // SVG de Prismic servido desde su CDN: usamos <img> plano para evitar
-          // remotePatterns / dangerouslyAllowSVG de next/image.
-          // eslint-disable-next-line @next/next/no-img-element
-          <img
-            src={logo.url ?? ""}
-            alt={logo.alt ?? "eddyson"}
-            className="h-[54px] w-auto"
-          />
-        )}
+        {/* Logo con el mark en naranja sobre fondo oscuro (el SVG de Prismic viene
+            todo en blanco, así que usamos la variante coloreada para el footer). */}
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src="/eddyson-logo-footer.svg"
+          alt="eddyson"
+          className="h-[54px] w-auto"
+        />
 
         <div className="mt-16 grid grid-cols-1 gap-x-12 gap-y-14 sm:grid-cols-2 xl:grid-cols-3">
           {/* Dirección */}

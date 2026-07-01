@@ -52,9 +52,18 @@ const ContactForm: FC<ContactFormProps> = ({ slice }) => {
     <section
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
-      className="w-full bg-canvas"
+      className="relative w-full overflow-hidden bg-canvas"
     >
-      <div className="mx-auto flex w-full max-w-[1495px] flex-col gap-12 px-6 py-16 xl:flex-row xl:items-center xl:justify-center xl:gap-[110px] xl:py-[100px]">
+      {/* Fondo decorativo de cuadrícula (denso abajo, se desvanece arriba). */}
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img
+        src="/Images/footer/Bottom-bg.png"
+        alt=""
+        aria-hidden
+        className="pointer-events-none absolute bottom-0 left-1/2 z-0 w-full max-w-[1680px] -translate-x-1/2 select-none"
+      />
+
+      <div className="relative z-10 mx-auto flex w-full max-w-[1495px] flex-col gap-12 px-6 py-16 xl:flex-row xl:items-center xl:justify-center xl:gap-[110px] xl:py-[100px]">
         {/* Texto editorial */}
         <div className="w-full max-w-[612px]">
           {isFilled.keyText(headline) && (
