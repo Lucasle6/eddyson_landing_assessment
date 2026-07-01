@@ -14,6 +14,11 @@ export type EdiExpertiseProps = SliceComponentProps<Content.EdiExpertiseSlice>;
 const EdiExpertise: FC<EdiExpertiseProps> = ({ slice }) => {
   const { headline, copy, quote, cards } = slice.primary;
 
+  // El subrayado naranja va solo debajo de "Let's talk.", no centrado bajo todo
+  // el quote. Separamos esa frase final del resto.
+  const quoteText = isFilled.keyText(quote) ? quote : "";
+  const quoteMatch = quoteText.match(/^([\s\S]*?)\s*(let[’']s talk\.?)\s*$/i);
+
   return (
     <section
       data-slice-type={slice.slice_type}
@@ -36,15 +41,24 @@ const EdiExpertise: FC<EdiExpertiseProps> = ({ slice }) => {
         </div>
 
         {/* Banda de quote */}
-        {isFilled.keyText(quote) && (
+        {quoteText && (
           <div className="my-16 flex items-center justify-between gap-6 xl:my-24">
             <span className="hidden h-px w-[253px] shrink-0 bg-[#949494] xl:block" />
-            <div className="mx-auto max-w-[737px] text-center">
-              <p className="font-serif text-[28px] leading-[140%] text-black xl:text-[36px]">
-                {quote}
-              </p>
-              <span className="mx-auto mt-6 block h-[7px] w-[179px] bg-brand" />
-            </div>
+            <p className="mx-auto max-w-[737px] text-center font-serif text-[28px] leading-[140%] text-black xl:text-[36px]">
+              {quoteMatch ? quoteMatch[1] : quoteText}
+              {quoteMatch && (
+                <>
+                  {" "}
+                  <span className="relative inline-block whitespace-nowrap">
+                    {quoteMatch[2]}
+                    <span
+                      aria-hidden
+                      className="absolute inset-x-0 top-full mt-2 block h-[7px] bg-brand"
+                    />
+                  </span>
+                </>
+              )}
+            </p>
             <span className="hidden h-px w-[253px] shrink-0 bg-[#949494] xl:block" />
           </div>
         )}
