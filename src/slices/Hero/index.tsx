@@ -75,7 +75,7 @@ const Hero: FC<HeroProps> = ({ slice }) => {
             </div>
 
             {/* Cluster de UIs (imagen compuesta del Figma) */}
-            <div className="mt-6 xl:absolute xl:right-0 xl:top-[-145px] xl:z-10 xl:mt-0 xl:w-[700px]">
+            <div className="mt-6 xl:absolute xl:right-0 xl:top-[-135px] xl:z-10 xl:mt-0 xl:w-[700px]">
               <Image
                 src="/Images/hero/hero-cluster.png"
                 alt=""
