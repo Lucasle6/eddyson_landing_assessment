@@ -32,7 +32,7 @@ const SiteHeader: FC = () => {
             className="h-[54px] w-auto xl:ml-[98px]"
           />
 
-          <span className="absolute right-0 top-1/2 hidden -translate-y-1/2 font-mono text-[12px] uppercase leading-4 tracking-[0.02em] text-[#949494] [writing-mode:vertical-rl] xl:block">
+          <span className="absolute right-0 top-1/2 mt-10 hidden -translate-y-1/2 whitespace-nowrap font-mono text-[12px] uppercase leading-4 tracking-[0.02em] text-[#949494] [writing-mode:vertical-rl] xl:block">
             eddyson | 2026
           </span>
         </div>

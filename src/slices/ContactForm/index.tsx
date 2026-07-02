@@ -17,15 +17,17 @@ type Field =
   | { kind: "input"; name: string; label: string; placeholder: string; type?: string; required?: boolean }
   | { kind: "select"; name: string; label: string; options: string[]; required?: boolean };
 
+// Campos según el brief del assessment (copy exacto). Los required/opcionales
+// y las opciones de los selects vienen definidos ahí.
 const FIELDS: Field[] = [
-  { kind: "input", name: "name", label: "Name", placeholder: "Your name", required: true },
+  { kind: "input", name: "name", label: "First & Last Name", placeholder: "Your first and last name", required: true },
   { kind: "input", name: "company", label: "Company", placeholder: "Company name", required: true },
-  { kind: "input", name: "email", label: "Email", type: "email", placeholder: "you@company.com", required: true },
-  { kind: "input", name: "phone", label: "Phone", type: "tel", placeholder: "+49 000 0000000" },
-  { kind: "select", name: "partnerType", label: "Partner type", required: true, options: ["Reseller", "Referral", "Technology", "Consulting"] },
-  { kind: "select", name: "industries", label: "Industries", options: ["Automotive", "Grocery", "Retail", "Logistics", "Other"] },
-  { kind: "input", name: "system", label: "System", placeholder: "e.g. SAP, Microsoft Dynamics" },
-  { kind: "input", name: "comments", label: "Comments", placeholder: "Tell us about your use case" },
+  { kind: "input", name: "email", label: "Business Email", type: "email", placeholder: "you@company.com", required: true },
+  { kind: "input", name: "phone", label: "Phone", type: "tel", placeholder: "+49 000 0000000", required: true },
+  { kind: "select", name: "partnerType", label: "Partner Type", required: true, options: ["Implementation Partner", "Sales Partner", "Other"] },
+  { kind: "select", name: "industries", label: "Industries", required: true, options: ["Automotive", "Grocery", "Logistics", "Retail", "Production"] },
+  { kind: "input", name: "system", label: "System focus", placeholder: "e.g. SAP, Microsoft" },
+  { kind: "input", name: "comments", label: "Questions or comments", placeholder: "Your questions or comments" },
 ];
 
 const fieldBox =
