@@ -5,12 +5,13 @@ import { PrismicNextLink } from "@prismicio/next";
 
 export type FooterProps = SliceComponentProps<Content.FooterSlice>;
 
-// Certificados / sellos (estáticos, no editoriales). Orden según el Figma.
+// Certificados / sellos (estáticos, no editoriales). Orden y alturas del Figma
+// (104 / 81 / 90 / 74).
 const CERTS = [
-  { src: "/Images/footer/certs/software-made.avif", alt: "Software Made in Germany", h: 96 },
-  { src: "/Images/footer/certs/software-hosted.avif", alt: "Software Hosted in Germany", h: 88 },
-  { src: "/Images/footer/certs/gs1.avif", alt: "GS1", h: 92 },
-  { src: "/Images/footer/certs/crefozert.avif", alt: "Crefozert", h: 104 },
+  { src: "/Images/footer/certs/software-made.avif", alt: "Software Made in Germany", h: 104 },
+  { src: "/Images/footer/certs/software-hosted.avif", alt: "Software Hosted in Germany", h: 81 },
+  { src: "/Images/footer/certs/gs1.avif", alt: "GS1", h: 90 },
+  { src: "/Images/footer/certs/crefozert.avif", alt: "Crefozert", h: 74 },
 ];
 
 const iconForPlatform = (platform: string | null | undefined): string | null => {

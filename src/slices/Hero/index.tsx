@@ -25,7 +25,7 @@ const Hero: FC<HeroProps> = ({ slice }) => {
       <div className="mx-auto w-full max-w-[1495px] px-6">
         {/* Título serif */}
         {isFilled.keyText(title) && (
-          <h1 className="max-w-[620px] pt-14 font-serif text-[42px] leading-[1.6] text-ink xl:pl-[100px] xl:text-[62px]">
+          <h1 className="max-w-[620px] pt-14 font-serif text-[42px] leading-[1.6] text-ink xl:pl-[100px] xl:pt-8 xl:text-[62px]">
             {title}
           </h1>
         )}
@@ -46,7 +46,7 @@ const Hero: FC<HeroProps> = ({ slice }) => {
             <div className="flex flex-col gap-9 px-8 py-12 xl:absolute xl:left-[102px] xl:top-[109px] xl:w-[484px] xl:p-0">
               <div className="flex flex-col gap-4">
                 {isFilled.keyText(topline) && (
-                  <h2 className="font-sans text-[28px] font-medium leading-none text-ink-strong xl:text-[36px]">
+                  <h2 className="font-sans text-[28px] font-medium leading-none text-ink-strong xl:text-[36px] xl:leading-[47px]">
                     {topline}
                   </h2>
                 )}
@@ -62,13 +62,13 @@ const Hero: FC<HeroProps> = ({ slice }) => {
                 {isFilled.link(cta_secondary) && (
                   <PrismicNextLink
                     field={cta_secondary}
-                    className="inline-flex items-center justify-center rounded-[8px] border-2 border-ink-strong px-6 py-4 text-[18px] font-medium text-ink-strong transition-colors hover:bg-ink-strong hover:text-white"
+                    className="inline-flex h-[57px] items-center justify-center rounded-[8px] border-2 border-ink-strong px-6 text-[16px] font-medium leading-[21px] tracking-[0.02em] text-ink transition-colors hover:bg-ink-strong hover:text-white"
                   />
                 )}
                 {isFilled.link(cta_primary) && (
                   <PrismicNextLink
                     field={cta_primary}
-                    className="inline-flex items-center justify-center rounded-[8px] bg-ink-strong px-6 py-[18px] text-[18px] font-medium text-white transition-colors hover:bg-ink"
+                    className="inline-flex h-[57px] items-center justify-center rounded-[8px] bg-ink-strong px-6 text-[16px] font-medium leading-[21px] tracking-[0.02em] text-canvas shadow-[0px_1px_8px_rgba(0,0,0,0.25)] transition-colors hover:bg-ink"
                   />
                 )}
               </div>
@@ -89,13 +89,13 @@ const Hero: FC<HeroProps> = ({ slice }) => {
 
           {/* Tira de logos de clientes (fondo gris, parte inferior de la card).
               La fila (1575px) es más ancha que la tira (1447px): sobresale y se recorta. */}
-          <div className="relative flex justify-center overflow-hidden rounded-b-[24px] border-t border-black/10 bg-[#ececec] py-8 xl:h-[167px] xl:items-center xl:py-0">
+          <div className="relative flex justify-center overflow-hidden rounded-b-[24px] border-t border-black/10 bg-[#ececec] py-8 xl:h-[167px] xl:items-center xl:justify-start xl:py-0">
             <Image
               src="/Images/hero/logo-strip.webp"
               alt="WAGNER, Lekkerland, B. Braun, TDK, NORD, JOCKEY, MITEGRO, SPAX"
               width={2000}
               height={231}
-              className="h-auto w-full max-w-[1575px] shrink-0 xl:w-[1575px] xl:max-w-none"
+              className="h-auto w-full max-w-[1575px] shrink-0 xl:-ml-[84px] xl:w-[1575px] xl:max-w-none"
             />
           </div>
         </div>

@@ -25,7 +25,9 @@ const EdiExpertise: FC<EdiExpertiseProps> = ({ slice }) => {
       data-slice-variation={slice.variation}
       className="w-full bg-canvas text-[#070707]"
     >
-      <div className="mx-auto w-full max-w-[1495px] px-6 py-16 xl:py-[100px]">
+      {/* En el Figma el gap PartnerProgram→intro es 114px (100 los pone el slice
+          anterior), intro→quote 114px y quote→cards 163px. */}
+      <div className="mx-auto w-full max-w-[1495px] px-6 py-16 xl:pb-[100px] xl:pt-[14px]">
         {/* Intro */}
         <div className="mx-auto max-w-[990px]">
           {isFilled.keyText(headline) && (
@@ -42,7 +44,7 @@ const EdiExpertise: FC<EdiExpertiseProps> = ({ slice }) => {
 
         {/* Banda de quote */}
         {quoteText && (
-          <div className="my-16 flex items-center justify-between gap-6 xl:my-24">
+          <div className="my-16 flex items-center justify-between gap-6 xl:mb-[163px] xl:mt-[114px]">
             <span className="hidden h-px w-[253px] shrink-0 bg-[#949494] xl:block" />
             <p className="mx-auto max-w-[737px] text-center font-serif text-[28px] leading-[140%] text-black xl:text-[36px]">
               {quoteMatch ? quoteMatch[1] : quoteText}
