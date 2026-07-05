@@ -1,7 +1,6 @@
 @import "tailwindcss";
 
 /*
- * Design tokens del Figma "Case study Jr".
  * Las fuentes se inyectan desde app/layout.tsx vía next/font (variables CSS).
  */
 @theme {

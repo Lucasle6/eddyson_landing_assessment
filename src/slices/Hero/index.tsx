@@ -7,8 +7,7 @@ import { PrismicNextLink } from "@prismicio/next";
 export type HeroProps = SliceComponentProps<Content.HeroSlice>;
 
 /**
- * Hero — reconstruido pixel-perfect desde el Figma "Case study Jr".
- * Tokens: título Quando 62/160% #212121, heading DM Sans 500 36/100% #161616,
+ * heading DM Sans 500 36/100% #161616,
  * copy DM Sans 18/160% +2% #212121, bloque naranja #FF8831 radius-top 24px.
  * El naranja + la tira gris (#ECECEC, radius-bottom 24px) forman una sola card.
  * El cluster de UIs de la derecha se usa como imagen compuesta única.
